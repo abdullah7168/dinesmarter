@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
@@ -24,3 +25,7 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+=======
+# dinesmarter
+Dine smarter app on ionic 2.
+>>>>>>> 436082d8a1e57691437cbeda86a208756f76bed6
