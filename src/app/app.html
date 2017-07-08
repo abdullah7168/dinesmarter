@@ -10,6 +10,44 @@
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
+      <ion-item>
+        <ion-label>Radius</ion-label>
+        <ion-select>
+          <ion-option value="100">100 meters.</ion-option>
+          <ion-option value="200">200 meters.</ion-option>
+          <ion-option value="400">400 meters.</ion-option>
+          <ion-option value="600">600 meters.</ion-option>
+          <ion-option value="800">800 meters.</ion-option>
+          <ion-option value="1000">1000 meters.</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cusine</ion-label>
+        <ion-select multiple="true">
+          <ion-option value="Canadian">Canadian</ion-option>
+          <ion-option value="Austrailian">Austrailian</ion-option>
+          <ion-option value="English">English</ion-option>
+          <ion-option value="Chinese">Chinese</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Service Syle</ion-label>
+        <ion-select multiple="true">
+          <ion-option value="Canadian">Canadian</ion-option>
+          <ion-option value="Austrailian">Austrailian</ion-option>
+          <ion-option value="English">English</ion-option>
+          <ion-option value="Chinese">Chinese</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Allergens</ion-label>
+        <ion-select multiple="true">
+          <ion-option value="Canadian">Canadian</ion-option>
+          <ion-option value="Austrailian">Austrailian</ion-option>
+          <ion-option value="English">English</ion-option>
+          <ion-option value="Chinese">Chinese</ion-option>
+        </ion-select>
+      </ion-item>
     </ion-list>
   </ion-content>
 
