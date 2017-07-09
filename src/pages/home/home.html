@@ -8,11 +8,15 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-list>
+    <ion-item *ngFor="let ob of data">
+      
+      <h2>{{ob.id}} {{ob.id}}</h2>
+      <p>{{ob.allergen}}</p>
+    </ion-item>
+  </ion-list>
+  <agm-map  [latitude]="lat" [longitude]="lng" [zoom]="12">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

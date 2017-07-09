@@ -8,6 +8,10 @@ import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Geolocation } from '@ionic-native/geolocation';
+import { AgmCoreModule } from '@agm/core';
+import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
+     IonicStorageModule.forRoot(),
+     AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCp6N2bgS5erscXQxqfFcDhauL7RWTwqnE'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -24,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage
   ],
   providers: [
+    Geolocation,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
