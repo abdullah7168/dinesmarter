@@ -23,29 +23,20 @@
       </ion-item>
       <ion-item>
         <ion-label>Cusine</ion-label>
-        <ion-select multiple="true">
-          <ion-option value="Canadian">Canadian</ion-option>
-          <ion-option value="Austrailian">Austrailian</ion-option>
-          <ion-option value="English">English</ion-option>
-          <ion-option value="Chinese">Chinese</ion-option>
+        <ion-select   multiple="true">
+          <ion-option *ngFor="let cusine of cusines" value="{{cusine.id}}">{{cusine.cusine}}</ion-option>
         </ion-select>
       </ion-item>
       <ion-item>
         <ion-label>Service Syle</ion-label>
-        <ion-select multiple="true">
-          <ion-option value="Canadian">Canadian</ion-option>
-          <ion-option value="Austrailian">Austrailian</ion-option>
-          <ion-option value="English">English</ion-option>
-          <ion-option value="Chinese">Chinese</ion-option>
+        <ion-select   multiple="true">
+          <ion-option  *ngFor="let service of services" value="{{service.id}}">{{service.serviceStyle}}</ion-option>
         </ion-select>
       </ion-item>
       <ion-item>
         <ion-label>Allergens</ion-label>
-        <ion-select multiple="true">
-          <ion-option value="Canadian">Canadian</ion-option>
-          <ion-option value="Austrailian">Austrailian</ion-option>
-          <ion-option value="English">English</ion-option>
-          <ion-option value="Chinese">Chinese</ion-option>
+        <ion-select multiple="true" [compareWith]="compareAllergens">
+          <ion-option *ngFor="let alg of allergens" value="{{alg.id}}">{{alg.allergen}}</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
