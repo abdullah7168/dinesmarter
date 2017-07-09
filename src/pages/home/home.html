@@ -8,13 +8,13 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <!--<ion-list>
     <ion-item *ngFor="let ob of data">
       
       <h2>{{ob.id}} {{ob.id}}</h2>
       <p>{{ob.allergen}}</p>
     </ion-item>
-  </ion-list>
+  </ion-list>-->
   <agm-map  [latitude]="lat" [longitude]="lng" [zoom]="12">
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>

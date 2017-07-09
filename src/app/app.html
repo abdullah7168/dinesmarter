@@ -35,7 +35,7 @@
       </ion-item>
       <ion-item>
         <ion-label>Allergens</ion-label>
-        <ion-select multiple="true" [compareWith]="compareAllergens">
+        <ion-select multiple="true" >
           <ion-option *ngFor="let alg of allergens" value="{{alg.id}}">{{alg.allergen}}</ion-option>
         </ion-select>
       </ion-item>
