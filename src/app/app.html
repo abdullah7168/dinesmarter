@@ -10,6 +10,35 @@
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
+      <ion-item>
+        <ion-label>Radius</ion-label>
+        <ion-select>
+          <ion-option value="100">100 meters.</ion-option>
+          <ion-option value="200">200 meters.</ion-option>
+          <ion-option value="400">400 meters.</ion-option>
+          <ion-option value="600">600 meters.</ion-option>
+          <ion-option value="800">800 meters.</ion-option>
+          <ion-option value="1000">1000 meters.</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cusine</ion-label>
+        <ion-select   multiple="true">
+          <ion-option *ngFor="let cusine of cusines" value="{{cusine.id}}">{{cusine.cusine}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Service Syle</ion-label>
+        <ion-select   multiple="true">
+          <ion-option  *ngFor="let service of services" value="{{service.id}}">{{service.serviceStyle}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Allergens</ion-label>
+        <ion-select multiple="true" [compareWith]="compareAllergens">
+          <ion-option *ngFor="let alg of allergens" value="{{alg.id}}">{{alg.allergen}}</ion-option>
+        </ion-select>
+      </ion-item>
     </ion-list>
   </ion-content>
 
